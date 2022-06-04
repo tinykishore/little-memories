@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <string.h>
+#include <stdbool.h>
 
 // get the current time
 void get_time(char *time_str) {
@@ -10,6 +11,7 @@ void get_time(char *time_str) {
             tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday,
             tm.tm_hour, tm.tm_min, tm.tm_sec);
 }
+
 
 int main() {
     // Create input buffer
@@ -25,12 +27,12 @@ int main() {
         return 1;
     }
 
-    while (1){
+    while (true) {
         // getting input from user
         fgets(buffer, 4096, stdin);
-        if(strcmp(buffer, "-exit\n") == 0){
+        if (strcmp(buffer, "-exit\n") == 0) {
             break;
-        } else{
+        } else {
 
         }
         // writing to file
